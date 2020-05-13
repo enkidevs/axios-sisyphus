@@ -10,6 +10,9 @@
     "tsc": "tsc",
     "prepublish": "npm run lint && npm run test && npm run tsc"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "axios",
     "http",

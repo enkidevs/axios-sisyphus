@@ -67,7 +67,7 @@ describe('behavior', () => {
     await expect(
       sisyphus.request<R>({
         retries: 1,
-        responseFailedFilter: (response) => !response.data.ok,
+        responseFailedFilter: async (response) => !response.data.ok,
       }),
     ).rejects.toMatchObject({
       errors: expect.objectContaining({
