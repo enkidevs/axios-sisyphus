@@ -5,17 +5,17 @@ import axios, {
   AxiosError,
 } from 'axios';
 
-type Config<R = any> = {
+export interface Config<R = any> {
   retries?: number;
   responseFailedFilter?: (response: AxiosResponse<R>) => Promise<boolean>;
   failedIterationCallback?: (index: number) => Promise<void>;
-};
+}
 
-type ErrorList<R = any> = Error & {
+export interface ErrorList<R = any> extends Error {
   errors: Array<AxiosError | AxiosResponse<R>>;
-};
+}
 
-type Result<R> = Promise<AxiosResponse<R>>;
+export type Result<R> = Promise<AxiosResponse<R>>;
 
 const DEFAULTS = {
   retries: 1,

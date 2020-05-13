@@ -6,23 +6,32 @@ External services are not always reliable. Random failures can easily break the 
 
 Much like Albert Camus, we sometimes need to subject our external HTTP requests to _endless\*_ cycles of futile labor. We hope, however, that our Sisyphus can break this cycle and improve the resilience of external service communication.
 
-![we must imagine Sisyphus happy](https://img.enkipro.com/d4c2ac02e4802d7203a3b3498548edd5.jpeg)
+<img src="https://img.enkipro.com/d4c2ac02e4802d7203a3b3498548edd5.jpeg" width="500px"/>
+
 _image taken from [existentialcomics](https://existentialcomics.com/comic/29)_
 
 ## Installation
 
-<!-- TODO: fill in this section once it's published to npm -->
-
 This module should work both for Node and browser environments.
+
+```sh
+npm install --save axios-sisyphus
+```
 
 ## Usage
 
 Using `axios-sisyphus` is as easy as doing:
 
 ```ts
-import { get } from 'axios-request';
+import { get } from '@enkidevs/axios-sisyphus';
 
 const response = await get({ retries: 5 }, { url: 'https://github.com' });
+```
+
+For commonJS you can import the library like this:
+
+```js
+const request = require('@enkidevs/axios-sisyphus').default;
 ```
 
 ## API
@@ -64,7 +73,7 @@ const axiosConfig = {
 With these inputs you should be able to use the `request` function:
 
 ```ts
-import request from 'axios-sisyphus';
+import request from '@enkidevs/axios-sisyphus';
 
 request({ retries: 3 }, { url: 'https://some-url.io', method: 'GET' })
   .then((response) => {
@@ -95,8 +104,8 @@ In the case of no successful response within all retries, an `Error` object is t
 To mirror axios' API method aliases are also exposed by `axios-sisyphus`:
 
 ```ts
-import * as sisyphus from 'axios-sisyphus';
-// import { get } from 'axios-sisyphus'; also works
+import * as sisyphus from '@enkidevs/axios-sisyphus';
+// import { get } from '@enkidevs/axios-sisyphus'; also works
 
 sisyphus.get(config, axiosConfig);
 sisyphus.head(config, axiosConfig);
@@ -167,3 +176,9 @@ try {
 ```
 
 This generic defaults to `any`.
+
+We also export the types used in this library:
+
+- `Config` -> axios-sisyphus configuration
+- `ErrorList` -> extended `Error` with `{ errors: Array<AxiosError | AxiosResponse<R>>; }`
+- `Response<R = any>` -> `Promise<AxiosResponse<R>>`
