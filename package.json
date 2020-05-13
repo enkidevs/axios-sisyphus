@@ -13,17 +13,18 @@
   "keywords": [
     "axios",
     "http",
-    "retry"
+    "retry",
+    "request"
   ],
   "author": "Cătălin Buruiană, loopiezlol@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
-    "@typescript-eslint/parser": "^2.32.0",
     "axios": "^0.19.2"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
