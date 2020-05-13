@@ -15,12 +15,16 @@ _image taken from [existentialcomics](https://existentialcomics.com/comic/29)_
 
 This module should work both for Node and browser environments.
 
+```sh
+npm install --save axios-sisyphus
+```
+
 ## Usage
 
 Using `axios-sisyphus` is as easy as doing:
 
 ```ts
-import { get } from 'axios-request';
+import { get } from '@enkidevs/axios-sisyphus';
 
 const response = await get({ retries: 5 }, { url: 'https://github.com' });
 ```
@@ -64,7 +68,7 @@ const axiosConfig = {
 With these inputs you should be able to use the `request` function:
 
 ```ts
-import request from 'axios-sisyphus';
+import request from '@enkidevs/axios-sisyphus';
 
 request({ retries: 3 }, { url: 'https://some-url.io', method: 'GET' })
   .then((response) => {
@@ -95,8 +99,8 @@ In the case of no successful response within all retries, an `Error` object is t
 To mirror axios' API method aliases are also exposed by `axios-sisyphus`:
 
 ```ts
-import * as sisyphus from 'axios-sisyphus';
-// import { get } from 'axios-sisyphus'; also works
+import * as sisyphus from '@enkidevs/axios-sisyphus';
+// import { get } from '@enkidevs/axios-sisyphus'; also works
 
 sisyphus.get(config, axiosConfig);
 sisyphus.head(config, axiosConfig);

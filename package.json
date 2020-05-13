@@ -1,5 +1,5 @@
 {
-  "name": "axios-sisyphus",
+  "name": "@enkidevs/axios-sisyphus",
   "version": "0.0.1",
   "description": "library for retryable and configurable HTTP requests",
   "main": "index.js",
