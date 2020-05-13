@@ -19,7 +19,7 @@
     "retry",
     "request"
   ],
-  "author": "Cătălin Buruiană, loopiezlol@gmail.com",
+  "author": "Cătălin Buruiană <loopiezlol@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2"
