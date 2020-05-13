@@ -11,8 +11,6 @@ _image taken from [existentialcomics](https://existentialcomics.com/comic/29)_
 
 ## Installation
 
-<!-- TODO: fill in this section once it's published to npm -->
-
 This module should work both for Node and browser environments.
 
 ```sh
@@ -27,6 +25,12 @@ Using `axios-sisyphus` is as easy as doing:
 import { get } from '@enkidevs/axios-sisyphus';
 
 const response = await get({ retries: 5 }, { url: 'https://github.com' });
+```
+
+For commonJS you can import the library like this:
+
+```js
+const request = require('@enkidevs/axios-sisyphus').default;
 ```
 
 ## API
@@ -171,3 +175,9 @@ try {
 ```
 
 This generic defaults to `any`.
+
+We also export the types used in this library:
+
+- `Config` -> axios-sisyphus configuration
+- `ErrorList` -> extended `Error` with `{ errors: Array<AxiosError | AxiosResponse<R>>; }`
+- `Response<R = any>` -> `Promise<AxiosResponse<R>>`
