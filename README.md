@@ -6,7 +6,8 @@ External services are not always reliable. Random failures can easily break the 
 
 Much like Albert Camus, we sometimes need to subject our external HTTP requests to _endless\*_ cycles of futile labor. We hope, however, that our Sisyphus can break this cycle and improve the resilience of external service communication.
 
-![we must imagine Sisyphus happy](https://img.enkipro.com/d4c2ac02e4802d7203a3b3498548edd5.jpeg)
+<img src="https://img.enkipro.com/d4c2ac02e4802d7203a3b3498548edd5.jpeg" width="500px"/>
+
 _image taken from [existentialcomics](https://existentialcomics.com/comic/29)_
 
 ## Installation
