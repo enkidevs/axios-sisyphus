@@ -2,9 +2,13 @@
   "name": "@enkidevs/axios-sisyphus",
   "version": "0.0.1",
   "description": "library for retryable and configurable HTTP requests",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "lint": "eslint . --ignore-path .gitignore",
+    "test": "jest",
+    "tsc": "tsc",
+    "prepublish": "npm run lint && npm run test && npm run tsc"
   },
   "keywords": [
     "axios",
