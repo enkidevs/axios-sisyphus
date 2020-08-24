@@ -22,7 +22,7 @@
   "author": "Cătălin Buruiană <loopiezlol@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.20.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
