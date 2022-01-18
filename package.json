@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/axios-sisyphus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "library for retryable and configurable HTTP requests",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
